@@ -1,12 +1,13 @@
-
-function range(start, end, step) {
-  let nums = [];
-  nums[0] = start;
-  while (start < end && start + step <= end) {
-  nums.push(start += step);
-}
-  end = nums.length-1;
-  return nums;
+const range = function (start, end, step) {
+  let newArr = []
+  for (let i = start; i <= end; i = i + step) {
+    if( start > end ||  step <= 0 || undefined) {
+      break;
+    } else {
+      newArr.push(i);
+    }
+  }
+  return newArr;
 }
 
 console.log(range(0, 10, 2));

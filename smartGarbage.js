@@ -1,9 +1,14 @@
 function smartGarbage(trash, bins) {
-  bins.waste = 0;
-  bins.recycling = 0;
-  bins.compost = 0;
-  
-  bins[trash] =+ 1;
+  if (trash === 'waste') {
+    bins.waste++;
+    return bins;
+  } else if (trash === 'recycling'){
+    bins.recycling++;
+    return bins;
+  } else if (trash === 'compost') {
+    bins.compost++;
+    return bins;
+  }
 }
 
 
